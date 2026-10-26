@@ -39,7 +39,7 @@ agents_swarm/
 tests/
   test_store.py
 examples/
-  portfolio_exposure/      # End-to-end goal, instructions, and synthetic holdings
+  loan_amortization/       # End-to-end goal and synthetic loan scenarios
 .team/
   team.sqlite3             # Coordination state, created at runtime
 workspace/                  # Generated code and tests, created at runtime
@@ -60,7 +60,7 @@ agents-swarm run-file goal.md --agents agent-1,agent-2,agent-3
 
 This single command asks the planner to break the brief into focused, non-overlapping tasks; stores the brief and plan in SQLite; starts the agents to claim and execute those tasks; and synthesizes a final report. The report is printed and saved under `workspace/reports/project-<id>-final.md`. Generated code and tests go in `workspace/` by default. If some tasks fail or are blocked, the report marks the project incomplete instead of claiming success.
 
-See the [portfolio exposure example](examples/portfolio_exposure/README.md) for a complete goal brief and synthetic CSV fixture.
+See the [loan amortization example](examples/loan_amortization/README.md) for a complete goal brief and synthetic scenario fixture.
 
 For a small, manually defined task, add it directly:
 

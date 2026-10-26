@@ -1,0 +1,5 @@
+scenario,principal,annual_rate,term_months,origination_fee
+Fixed 30Y A,320000,6.25,360,1200
+Fixed 20Y B,320000,5.95,240,950
+Fixed 15Y C,320000,5.50,180,700
+Zero-rate test,12000,0,24,0
