@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agents-swarm"
+version = "0.1.0"
+description = "A DeepAgents coding swarm that plans work from a brief file"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "deepagents>=0.7.0",
+  "langchain-anthropic>=1.0.0",
+  "quick-sandbox[qemu,ubuntu]>=0.13.0",
+]
+
+[project.scripts]
+agents-swarm = "agents_swarm.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["agents_swarm*"]
