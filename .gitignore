@@ -4,3 +4,4 @@ __pycache__/
 .team/
 .env
 /workspace/
+/examples/portfolio_exposure/output/

@@ -1,5 +1,4 @@
 # agents_swarm — DeepAgents collaborative coding team
-# DeepAgents collaborative coding team
 
 A standalone prototype for a small group of agents that share a task queue, persistent messages, and a context board. Each task runs in a Microsoft QuickSand Ubuntu VM. Replace `agent.txt` with your project-specific workflow when ready.
 
@@ -27,18 +26,20 @@ Set `ANTHROPIC_API_KEY` in `.env` (copy `.env.example`) or the shell. Install th
 
 ```text
 agents_swarm/
-  agent.py                 # Claim task, run DeepAgents, summarize
+  agent.py                 # Claim and run one task with DeepAgents
   cli.py                   # CLI and concurrent worker launcher
-  projects.py               # Brief decomposition, swarm run, and final report
+  projects.py              # Brief decomposition, swarm run, and final report
   coordination/
+    board.py               # Shared board and peer-message tools
     tasks.py               # Complete/block current-task tools
-    tasks.py               # Complete/release current-task tools
   execution/
     quicksand.py           # Host workspace mount and sandbox command tool
   storage/
     store.py               # SQLite persistence and atomic task claims
 tests/
   test_store.py
+examples/
+  portfolio_exposure/      # End-to-end goal, instructions, and synthetic holdings
 .team/
   team.sqlite3             # Coordination state, created at runtime
 workspace/                  # Generated code and tests, created at runtime
@@ -58,6 +59,8 @@ agents-swarm run-file goal.md --agents agent-1,agent-2,agent-3
 ```
 
 This single command asks the planner to break the brief into focused, non-overlapping tasks; stores the brief and plan in SQLite; starts the agents to claim and execute those tasks; and synthesizes a final report. The report is printed and saved under `workspace/reports/project-<id>-final.md`. Generated code and tests go in `workspace/` by default. If some tasks fail or are blocked, the report marks the project incomplete instead of claiming success.
+
+See the [portfolio exposure example](examples/portfolio_exposure/README.md) for a complete goal brief and synthetic CSV fixture.
 
 For a small, manually defined task, add it directly:
 

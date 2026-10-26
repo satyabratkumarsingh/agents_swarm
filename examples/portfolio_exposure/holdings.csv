@@ -1,0 +1,13 @@
+symbol,name,asset_class,sector,region,currency,market_value
+ACME,Acme Technology,Equity,Information Technology,North America,USD,180000
+NORTH,Northstar Health,Equity,Health Care,North America,USD,120000
+EURO,Euro Industrial,Equity,Industrials,Europe,EUR,100000
+PAC,Pacific Consumer,Equity,Consumer Staples,Asia Pacific,JPY,90000
+CLOUD,Cloud Systems,Equity,Information Technology,North America,USD,85000
+GREEN,Green Utilities,Equity,Utilities,Europe,EUR,75000
+GOVT,Global Government Bond,Fixed Income,,Global,USD,110000
+CORP,Corporate Bond Fund,Fixed Income,,North America,USD,80000
+GOLD,Gold Trust,Commodity,,Global,USD,50000
+CASH,USD Cash,Cash,,North America,USD,60000
+EM,Emerging Markets Fund,Equity,Financials,Emerging Markets,USD,50000
+REAL,Real Estate Fund,Real Estate,Real Estate,North America,USD,0
